@@ -10,7 +10,7 @@
     
     <title>
         
-            &lt;script&gt;标签属性defer和async的区别 | 
+            &lt;script&gt;��ǩ����defer��async������ | 
         
         Cbwww Blog
     </title>
@@ -58,7 +58,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://souvenir13.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="&lt;script&gt;标签属性defer和async的区别 | Cbwww Blog">
+    <meta property="og:title" content="&lt;script&gt;��ǩ����defer��async������ | Cbwww Blog">
     <meta property="og:description" content="����ʦ����ѧ15���о�������־�ڳ�Ϊǰ�˴�ţ��Ů�ˣ�">
     <meta property="og:article:tag" content="JavaScript"> <meta property="og:article:tag" content="Hexo"> 
 
@@ -284,7 +284,7 @@
         
     
             <p class="article-headline-p">
-                <script>标签属性defer和async的区别
+                <script>��ǩ����defer��async������
             </p>
         </div>
 
@@ -352,7 +352,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&lt;script&gt;标签属性defer和async的区别&url=http://souvenir13.github.io//2017/04/25/script-标签属性defer和async的区别/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&lt;script&gt;��ǩ����defer��async������&url=http://souvenir13.github.io//2017/04/25/script-标签属性defer和async的区别/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -361,7 +361,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&lt;script&gt;标签属性defer和async的区别&url=http://souvenir13.github.io//2017/04/25/script-标签属性defer和async的区别/index.html&via=Bowen Chan" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&lt;script&gt;��ǩ����defer��async������&url=http://souvenir13.github.io//2017/04/25/script-标签属性defer和async的区别/index.html&via=Bowen Chan" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -403,42 +403,42 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>感觉《JavaScript高级设计程序》书中对defer和async的描述不是很清楚，于是又翻阅了一些相关资料来学习，以下是我的相关学习笔记。</p>
-<p>##比较三种情况：</p>
+        <p>�о���JavaScript�߼����Ƴ��������ж�defer��async���������Ǻ������������ַ�����һЩ����������ѧϰ���������ҵ�����ѧϰ�ʼǡ�</p>
+<p>##�Ƚ�����������</p>
 <ol>
-<li>没有defer、async</li>
-<li>有defer</li>
-<li>有async</li>
+<li>û��defer��async</li>
+<li>��defer</li>
+<li>��async</li>
 </ol>
-<p> 第一种情况下，浏览器解析到script时，会停止对之后内容的解析，立即加载JS，加载完毕后立即执行，执行完毕后再继续解析之后的内容。</p>
-<p> 第二种情况下，浏览器立即加载JS的同时不会停止对之后内容的解析，然而对JS的执行会延迟到页面完全解析完之后。</p>
-<p> 第三种情况与第二种情况的区别在于，JS加载完毕后会立即执行（异步执行），所以很有可能不是按照原本的顺序来执行的。</p>
-<p>#####以下图片能够通俗易懂地了解三种情况的区别：<br><img src="/img/article/defer_async.jpg" alt="pic" title="defer和async的区别"></p>
+<p> ��һ�������£�������������scriptʱ����ֹͣ��֮�����ݵĽ�������������JS���������Ϻ�����ִ�У�ִ�����Ϻ��ټ�������֮�������ݡ�</p>
+<p> �ڶ��������£���������������JS��ͬʱ����ֹͣ��֮�����ݵĽ�����Ȼ����JS��ִ�л��ӳٵ�ҳ����ȫ������֮����</p>
+<p> �������������ڶ����������������ڣ�JS�������Ϻ�������ִ�У��첽ִ�У������Ժ��п��ܲ��ǰ���ԭ����˳����ִ�еġ�</p>
+<p>#####����ͼƬ�ܹ�ͨ���׶����˽�����������������<br><img src="/img/article/defer_async.jpg" alt="pic" title="defer��async������"></p>
 <ul>
-<li>注1：<br>在使用async时，要明确外联脚本之间的没有依赖关系。以免脚本异步执行，引发错误。</li>
-<li>注2：<br>无论使用defer还是async属性，都需要首先将页面中的js文件进行整理，哪些文件之间有依赖性，哪些文件可以延迟加载等等，做好js代码的合并和拆分，然后再根据页面需要使用这两个属性。</li>
+<li>ע1��<br>��ʹ��asyncʱ��Ҫ��ȷ�����ű�֮����û��������ϵ�������ű��첽ִ�У�����������</li>
+<li>ע2��<br>����ʹ��defer����async���ԣ�����Ҫ���Ƚ�ҳ���е�js�ļ�������������Щ�ļ�֮���������ԣ���Щ�ļ������ӳټ��صȵȣ�����js�����ĺϲ��Ͳ��֣�Ȼ���ٸ���ҳ����Ҫʹ�����������ԡ�</li>
 </ul>
-<p><strong>接着，</strong></p>
-<p>##聊聊defer和async的具体特征：</p>
+<p><strong>���ţ�</strong></p>
+<p>##����defer��async�ľ���������</p>
 <ul>
-<li>相同之处：<ul>
-<li>加载文件时不阻塞页面渲染</li>
-<li>对于inline的script无效</li>
-<li>使用这两个属性的脚本中不能调用document.write方法</li>
-<li>有脚本的onload的事件回调</li>
+<li>��֮ͬ����<ul>
+<li>�����ļ�ʱ������ҳ����Ⱦ</li>
+<li>����inline��script��Ч</li>
+<li>ʹ�����������ԵĽű��в��ܵ���document.write����</li>
+<li>�нű���onload���¼��ص�</li>
 </ul>
 </li>
-<li>不同之处：<ul>
-<li>HTML4.0定义了defer；HTML5新定义了async</li>
-<li>执行时间不同：defer是当文档完全解析完后执行脚本；async是加载完脚本立即执行。</li>
+<li>��֮ͬ����<ul>
+<li>HTML4.0������defer��HTML5�¶�����async</li>
+<li>ִ��ʱ�䲻ͬ��defer�ǵ��ĵ���ȫ��������ִ�нű���async�Ǽ������ű�����ִ�С�</li>
 </ul>
 </li>
 </ul>
-<p><strong>文献参考：</strong></p>
+<p><strong>���ײο���</strong></p>
 <ul>
-<li><a href="https://segmentfault.com/q/1010000000640869" target="_blank" rel="external">defer和async的区别-from Segmentfault</a></li>
-<li><a href="http://ued.ctrip.com/blog/script-defer-and-async.html" target="_blank" rel="external">script的defer和async-from携程设计委员会</a></li>
-<li><a href="http://www.qdfuns.com/notes/18149/69749578e3b0811ef23b1b9317409b20.html" target="_blank" rel="external">script的defer和async的区别-from前端网</a></li>
+<li><a href="https://segmentfault.com/q/1010000000640869" target="_blank" rel="external">defer��async������-from Segmentfault</a></li>
+<li><a href="http://ued.ctrip.com/blog/script-defer-and-async.html" target="_blank" rel="external">script��defer��async-fromЯ������ίԱ��</a></li>
+<li><a href="http://www.qdfuns.com/notes/18149/69749578e3b0811ef23b1b9317409b20.html" target="_blank" rel="external">script��defer��async������-fromǰ����</a></li>
 </ul>
 
     
@@ -584,7 +584,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/j��ѧϰ/">ǰ��ѧϰ<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
