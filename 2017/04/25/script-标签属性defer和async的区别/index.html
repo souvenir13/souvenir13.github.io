@@ -404,9 +404,14 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>感觉《JavaScript高级设计程序》书中对defer和async的描述不是很清楚，于是又翻阅了一些相关资料来学习，以下是我的相关学习笔记。</p>
-<p>比较三种情况：<br>1 没有defer、async<br>2 有defer<br>3 有async</p>
+<p>比较三种情况：</p>
+<ol>
+<li>没有defer、async</li>
+<li>有defer</li>
+<li>有async</li>
+</ol>
 <p>第一种情况下，浏览器解析到script时，会停止对之后内容的解析，立即加载JS，加载完毕后立即执行，执行完毕后再继续解析之后的内容。<br>第二种情况下，浏览器立即加载JS的同时不会停止对之后内容的解析，然而对JS的执行会延迟到页面完全解析完之后。<br>第三种情况与第二种情况的区别在于，JS加载完毕后会立即执行（异步执行），所以很有可能不是按照原本的顺序来执行的。</p>
-<p>以下图片能够通俗易懂地了解三种情况的区别：</p>
+<p>以下图片能够通俗易懂地了解三种情况的区别：<br><img src="/img/article/defer_async.jpg" alt="pic" title="defer和async的区别"></p>
 
     
 
