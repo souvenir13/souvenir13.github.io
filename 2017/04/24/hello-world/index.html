@@ -298,7 +298,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="/img/mypic.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -317,6 +317,15 @@
     -->
 
     <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYklEQVR42u3aQXLDIBAEQP//08kDHMkzIG9kV3NKORKiObDUwOPnq9sDDw8PDw8PDw/vZrxH3P7o6On3o+eTPvO3XvSDh4eHN8J7sdSeDuX5M0e/HPV89OTi2PDw8PAGeUcLbvJMtNk97SefxPMpwMPDw7snbw1z/uTatOLh4eF9Fi8pD0mIgIeHh/e5vHaJz2E7UzOateDh4eHFvPyQaf7v0fM9PDw8vIBXX2m66HBrPxQ+HCEeHh7em3n5Qtyy24sFye/RRhwPDw9vhJfHBEkZuDbYTd7Fw8PDuxsvvyCVL+L5VruOj/Hw8PDezNsZ3NGwdhjtFEcxLh4eHt6lvJ0NbhvX5v9towo8PDy8Sd5aJJEMNI+Jd8oGHh4e3jwvjxjakLedmnbKDnvAw8PDezOvHVwyHTvL+s4hHB4eHt4kbyduyIODtYnLJxQPDw9vktcOot1ALway8bUGPDw8vEleu8Ftj6Z2puniO2V4eHh4l/J+grZ2RXX/Ymv7Fh4eHt48r93y5hFDvpXPR1UXBjw8PLyLeO0meCssKCPai8MIPDw8vIt47VHWWnzQXqhqY188PDy8eV67hV0rJG1JqL+Lh4eHN8jbCQJ2JiIpCXmfeHh4eO/mta2Nax9LLY968fDw8OZ5+5/MA4i8MOQxx+IBGB4eHt42Ly8G7TWp/LBtrTDg4eHh/S/v/MNr05HHsmuRBB4eHt4n8vIANy8Ma5cY8PDw8D6Ft8ZuD8CKfvDw8PAGee2hVwtrL10txsF4eHh4I7z9jW8bBCeFIS9XeHh4eJO872t4eHh4eHh4eHg3aL8WTl3JcWl6ZwAAAABJRU5ErkJggg==">
+        </ul>
     
 
     <!-- Tags (bookmark) -->
@@ -473,12 +482,12 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="Bowen Chan's avatar">
+        <img src="/img/mypic.jpg" alt="Bowen Chan's avatar">
     </div>
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        youremail@email.com
+        cbwicay@163.com
         <b class="caret"></b>
     </a>
 </div>
@@ -513,6 +522,8 @@
             </a>
         </li>
         
+            <li class="divider"></li>
+        
     
 
     <!-- Archives  -->
@@ -535,11 +546,34 @@
 
     <!-- Categories  -->
     
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/日志/">日志<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
 
     <!-- Pages  -->
     
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">3</span>
+            </a>
+        </li>
+        
     
 </ul>
 
@@ -638,6 +672,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Weibo -->
     
+        <a href="@���������̲赫˯����" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.svg);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
 
     <!-- Instagram -->
     
@@ -646,6 +686,12 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- Github -->
+    
+        <a href="https://github.com/souvenir13" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.svg);">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
     
 
     <!-- LinkedIn -->
@@ -724,6 +770,10 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+
+    
+        <script src="/js/smoothscroll.js"></script>
+    
 
 
 
