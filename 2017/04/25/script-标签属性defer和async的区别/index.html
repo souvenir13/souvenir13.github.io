@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Bowen Chan">
     <meta name="description" content="����ʦ����ѧ15���о�������־�ڳ�Ϊǰ�˴�ţ��Ů�ˣ�">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="JavaScript,ǰ��,JavaScript">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -60,7 +60,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="&lt;script&gt;标签属性defer和async的区别 | Cbwww Blog">
     <meta property="og:description" content="����ʦ����ѧ15���о�������־�ڳ�Ϊǰ�˴�ţ��Ů�ˣ�">
-    
+    <meta property="og:article:tag" content="JavaScript"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -336,7 +336,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
     </ul>
     
 
@@ -406,7 +406,7 @@
         <p>感觉《JavaScript高级设计程序》书中对defer和async的描述不是很清楚，于是又翻阅了一些相关资料来学习，以下是我的相关学习笔记。</p>
 <p>比较三种情况：<br>1 没有defer、async<br>2 有defer<br>3 有async</p>
 <p>第一种情况下，浏览器解析到script时，会停止对之后内容的解析，立即加载JS，加载完毕后立即执行，执行完毕后再继续解析之后的内容。<br>第二种情况下，浏览器立即加载JS的同时不会停止对之后内容的解析，然而对JS的执行会延迟到页面完全解析完之后。<br>第三种情况与第二种情况的区别在于，JS加载完毕后会立即执行（异步执行），所以很有可能不是按照原本的顺序来执行的。</p>
-<p>以下图片能够通俗易懂地了解三种情况的区别：<br><img src="/img/article/defer-async.jpg" class="[class names]" title="[width] [height] [title text [alt text]]"></p>
+<p>以下图片能够通俗易懂地了解三种情况的区别：</p>
 
     
 
@@ -551,7 +551,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/日志/">日志<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/日志/">日志<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
