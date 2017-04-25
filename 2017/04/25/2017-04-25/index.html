@@ -10,7 +10,7 @@
     
     <title>
         
-            归档: 2017/4 | 
+            &lt;script&gt;标签属性defer和async的区别 | 
         
         Cbwww Blog
     </title>
@@ -58,7 +58,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://souvenir13.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/4 | Cbwww Blog">
+    <meta property="og:title" content="&lt;script&gt;标签属性defer和async的区别 | Cbwww Blog">
     <meta property="og:description" content="����ʦ����ѧ15���о�������־�ڳ�Ϊǰ�˴�ţ��Ů�ˣ�">
     
 
@@ -221,155 +221,242 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/25/2017-04-25/">&lt;script&gt;标签属性defer和async的区别</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            感觉《JavaScript高级设计程序》书中对defer和async的描述不是很清楚，于是又翻阅了一些相关资料来学习，以下是我的相关学习笔记。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/25/2017-04-25/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/mypic.jpg" width="44px" height="44px" alt="Bowen Chan's avatar">
-            </div>
-            <div>
-                <strong>Bowen Chan</strong>
-                <span>4月 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/24/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/24/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/mypic.jpg" width="44px" height="44px" alt="Bowen Chan's avatar">
-            </div>
-            <div>
-                <strong>Bowen Chan</strong>
-                <span>4月 24, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                <script>标签属性defer和async的区别
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/mypic.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Bowen Chan</strong>
+        <span>4月 25, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aQW7jMBAEQP//07vXBYLI3SOS1hqlU6BIIssHzqDJ15+vvl54eHh4eHh4eHgP473i6+fz/9757b/JWD+/M5sbHh4e3knem6W2BFzDrjF35oaHh4d3npcv2b+9e026puYl5824eHh4eA/jXU86LwPREo+Hh4f3Fby87V7boOPh4eE9k5cv2UksOwsdFpQTPDw8vCO8dgPs5N8f2N/Dw8PDu+S1Vx7Ltltf1+11MUM8PDy8zbxkKrOB8y/fab6HWQseHh7ebV7esF5HEnmM2x6KLeIPPDw8vM283dFq8mPl1Kh44OHh4W3mFfHo6JnrEpLHuEXbjYeHh7eZN2usZ2133nAnY9UtNR4eHt4i3qqBZ6FDPlY+Wzw8PLyTvCSizcPZVQFuu/2Gh4eHd4bXLsR5rJAXm/zdN9/Ew8PD28xrN73WhryzABcPDw/vCbxiYz6+026GrWq18fDw8HbzZpNLqPnSH4Wzs8KAh4eHt4E324hqA4X84NTsqBYeHh7ep3htAcgLQxs6zOJdPDw8vDO8dtldhWmvBI+Hh4d3hpdPd1YG2vZ9Fvvi4eHhnee1i/Kd46T3Y446jMDDw8NbymsPWrVHB9qykfzQw6MDeHh4eIt4s8Z31gTPNsDyGAIPDw/vDO9+kJqTZkdUF7TUeHh4eBt4O4pBexA2Pxr75kk8PDy8g7xkgU4a3DtlIC9OxckIPDw8vI/ykhC2fat9Bg8PD+9/5M0OSOXbZnmJWtxS4+Hh4ZW8dsnO798vJ8V2Gh4eHt4R3iwIyAtMG922G2x4eHh4J3nfd+Hh4eHh4eHh4T3g+gt4NeNfUR6WGAAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&lt;script&gt;标签属性defer和async的区别&url=http://souvenir13.github.io//2017/04/25/2017-04-25/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&lt;script&gt;标签属性defer和async的区别&url=http://souvenir13.github.io//2017/04/25/2017-04-25/index.html&via=Bowen Chan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://souvenir13.github.io//2017/04/25/2017-04-25/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://souvenir13.github.io//2017/04/25/2017-04-25/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>感觉《JavaScript高级设计程序》书中对defer和async的描述不是很清楚，于是又翻阅了一些相关资料来学习，以下是我的相关学习笔记。</p>
+<p>比较三种情况：</p>
+<ol>
+<li>没有defer、async</li>
+<li>有defer</li>
+<li>有async</li>
+</ol>
+<p>第一种情况下，浏览器解析到script时，会停止对之后内容的解析，立即加载JS，加载完毕后立即执行，执行完毕后再继续解析之后的内容。<br>第二种情况下，浏览器立即加载JS的同时不会停止对之后内容的解析，然而对JS的执行会延迟到页面完全解析完之后。<br>第三种情况与第二种情况的区别在于，JS加载完毕后会立即执行（异步执行），所以很有可能不是按照原本的顺序来执行的。</p>
+<p>以下图片能够通俗易懂地了解三种情况的区别：<br><img src="/img/article/defer_async.jpg" alt="pic" title="defer和async的区别"></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/04/24/hello-world/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
