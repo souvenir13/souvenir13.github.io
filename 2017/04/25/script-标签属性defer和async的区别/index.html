@@ -247,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#比较三种情况："><span class="post-toc-number">1.</span> <span class="post-toc-text">比较三种情况：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#以下图片能够通俗易懂地了解三种情况的区别："><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">以下图片能够通俗易懂地了解三种情况的区别：</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#聊聊defer和async的具体特征："><span class="post-toc-number">2.</span> <span class="post-toc-text">聊聊defer和async的具体特征：</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -404,8 +404,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>感觉《JavaScript高级设计程序》书中对defer和async的描述不是很清楚，于是又翻阅了一些相关资料来学习，以下是我的相关学习笔记。</p>
-<p>##比较三种情况：</p>
-<ol>
+<h2 id="比较三种情况："><a href="#比较三种情况：" class="headerlink" title="比较三种情况："></a>比较三种情况：</h2><ol>
 <li>没有defer、async</li>
 <li>有defer</li>
 <li>有async</li>
@@ -413,14 +412,13 @@
 <p> 第一种情况下，浏览器解析到script时，会停止对之后内容的解析，立即加载JS，加载完毕后立即执行，执行完毕后再继续解析之后的内容。</p>
 <p> 第二种情况下，浏览器立即加载JS的同时不会停止对之后内容的解析，然而对JS的执行会延迟到页面完全解析完之后。</p>
 <p> 第三种情况与第二种情况的区别在于，JS加载完毕后会立即执行（异步执行），所以很有可能不是按照原本的顺序来执行的。</p>
-<p>#####以下图片能够通俗易懂地了解三种情况的区别：<br><img src="/img/article/defer_async.jpg" alt="pic" title="defer和async的区别"></p>
+<h5 id="以下图片能够通俗易懂地了解三种情况的区别："><a href="#以下图片能够通俗易懂地了解三种情况的区别：" class="headerlink" title="以下图片能够通俗易懂地了解三种情况的区别："></a>以下图片能够通俗易懂地了解三种情况的区别：</h5><p><img src="/img/article/defer_async.jpg" alt="pic" title="defer和async的区别"></p>
 <ul>
 <li>注1：<br>在使用async时，要明确外联脚本之间的没有依赖关系。以免脚本异步执行，引发错误。</li>
 <li>注2：<br>无论使用defer还是async属性，都需要首先将页面中的js文件进行整理，哪些文件之间有依赖性，哪些文件可以延迟加载等等，做好js代码的合并和拆分，然后再根据页面需要使用这两个属性。</li>
 </ul>
 <p><strong>接着，</strong></p>
-<p>##聊聊defer和async的具体特征：</p>
-<ul>
+<h2 id="聊聊defer和async的具体特征："><a href="#聊聊defer和async的具体特征：" class="headerlink" title="聊聊defer和async的具体特征："></a>聊聊defer和async的具体特征：</h2><ul>
 <li>相同之处：<ul>
 <li>加载文件时不阻塞页面渲染</li>
 <li>对于inline的script无效</li>
