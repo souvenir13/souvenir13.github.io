@@ -404,19 +404,23 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h2 id="浏览器渲染流程"><a href="#浏览器渲染流程" class="headerlink" title="浏览器渲染流程"></a>浏览器渲染流程</h2><p><strong> 首先了解浏览器渲染页面的工作流程： </strong><a href="https://www.zhihu.com/question/30218438" target="_blank" rel="external">浏览器加载页面的工作流程-from知乎</a></p>
-<p><img src="/img/browser_render.jpg" alt="pic" title="浏览器加载页面工作流程"></p>
+<p><img src="/img/browser_render.png" alt="pic" title="浏览器加载页面工作流程"></p>
 <p>渲染引擎逐行解析HTML，为了尽快将页面呈现出来，它不会等到HTML都被解析完才创建并布局Render Tree。它会在处理后续内容的同时把处理过的局部内容先展示出来。</p>
 <p>之前理解有误，<strong>外部JS并不是浏览器逐行解析到script后再向服务器发起请求的</strong>，而是浏览器请求到HTML代码后，在生成DOM的最开始阶段，并行发起css、图片、js的请求，无论他们是否在HEAD里。但是JS的执行顺序是根据浏览器解析script标签顺序来的，因为JS引擎（负责对JS的解析与执行）是单线程的，所以JS的执行势必会对DOM Tree的构建造成阻塞。</p>
 <h2 id="为什么JS调用尽量放到网页底部？"><a href="#为什么JS调用尽量放到网页底部？" class="headerlink" title="为什么JS调用尽量放到网页底部？"></a>为什么JS调用尽量放到网页底部？</h2><p>了解了以上背景知识后，对该问题进行解答：<strong>为什么JS调用尽量放到网页底部？</strong></p>
-<pre><code>1. JS的下载和执行会阻塞DOM Tree的构建，对于在首屏范围内的HTML代码段里的script标签会截断首屏内容，造成首屏大片空白从而影响网站的用户体验。
-2. 如果JS中有对DOM的操作并且没有把这部分代码放入document.ready接口内，那么，当JS执行的时候DOM 可能还未加载完，这样便会出错。比如：对按钮绑定点击事件 这时候按钮还没被渲染出来 对他绑定就会出现问题
-</code></pre><p>（这里的首屏时间指的是浏览器第一次painting的时间。首屏内容的显示可以是不完整的。）</p>
+<ol>
+<li>JS的下载和执行会阻塞DOM Tree的构建，对于在首屏范围内的HTML代码段里的script标签会截断首屏内容，造成首屏大片空白从而影响网站的用户体验。</li>
+<li>如果JS中有对DOM的操作并且没有把这部分代码放入document.ready接口内，那么，当JS执行的时候DOM 可能还未加载完，这样便会出错。比如：对按钮绑定点击事件 这时候按钮还没被渲染出来 对他绑定就会出现问题</li>
+</ol>
+<p>（这里的首屏时间指的是浏览器第一次painting的时间。首屏内容的显示可以是不完整的。）</p>
 <p><strong>相关学习文档：</strong></p>
-<pre><code>1. [JS 调用尽量放到网页底部？-from知乎](https://www.zhihu.com/question/34147508]网站为什么)
-2. [一定要放在 Body 的最底部么？聊聊浏览器的渲染机制](https://segmentfault.com/a/1190000004292479]JS)
-    3. [聊聊浏览器的渲染机制（含示例）](https://segmentfault.com/a/1190000007766425)
-    4. [浏览器是怎样工作的：渲染引擎，HTML解析（连载二）-from携程设计委员会] (http://ued.ctrip.com/blog/how-browsers-work-rendering-engine-html-parsing-series-ii.html)
-</code></pre><p>在学习这些文档过程中，遇到了很多不能理解的点：</p>
+<ol>
+<li><a href="https://www.zhihu.com/question/34147508]网站为什么" target="_blank" rel="external">JS 调用尽量放到网页底部？-from知乎</a></li>
+<li><a href="https://segmentfault.com/a/1190000004292479]JS" target="_blank" rel="external">一定要放在 Body 的最底部么？聊聊浏览器的渲染机制</a></li>
+<li><a href="https://segmentfault.com/a/1190000007766425" target="_blank" rel="external">聊聊浏览器的渲染机制（含示例）</a></li>
+<li><a href="http://ued.ctrip.com/blog/how-browsers-work-rendering-engine-html-parsing-series-ii.html" target="_blank" rel="external">浏览器是怎样工作的：渲染引擎，HTML解析（连载二）-from携程设计委员会</a></li>
+</ol>
+<p>在学习这些文档过程中，遇到了很多不能理解的点：</p>
 <ol>
 <li>为什么script标签的位置不一定会影响首屏时间。<br>对于顶部的script，肯定会阻塞浏览器对之后的HTML解析，这种情况下不就影响首屏时间了吗？</li>
 <li>为什么放到网页顶部的JS不一定阻塞页面渲染</li>
@@ -426,9 +430,11 @@
 </blockquote>
 <p>js对其他资源的控制，需要对部分资源请求进行延时，因此将script尽可能放到底部可以防止阻塞的产生。</p>
 <p>《高性能网站建设指南》的相关笔记：</p>
-<pre><code>1. [前端网站性能优化14点](http://giscafer.com/2015/09/06/web-performance-optimization/)
-2. [《高性能网站建设指南》笔记](http://www.qdfuns.com/notes/42225/ba180246ba836816eba515f541427322.html)
-</code></pre><p>前端初学者，还有很多不懂得地方，望大神们指导！</p>
+<ol>
+<li><a href="http://giscafer.com/2015/09/06/web-performance-optimization/" target="_blank" rel="external">前端网站性能优化14点</a></li>
+<li><a href="http://www.qdfuns.com/notes/42225/ba180246ba836816eba515f541427322.html" target="_blank" rel="external">《高性能网站建设指南》笔记</a></li>
+</ol>
+<p>前端初学者，还有很多不懂得地方，望大神们指导！</p>
 
     
 
