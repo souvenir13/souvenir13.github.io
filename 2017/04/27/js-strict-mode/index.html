@@ -247,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#���ֱ�������������"><span class="post-toc-number">1.</span> <span class="post-toc-text">���ֱ�������������</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Strictgʽ"><span class="post-toc-number">2.</span> <span class="post-toc-text">Strictģʽ</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#两种变量声明的区别"><span class="post-toc-number">1.</span> <span class="post-toc-text">两种变量声明的区别</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Strict模式"><span class="post-toc-number">2.</span> <span class="post-toc-text">Strict模式</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -403,13 +403,13 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="���ֱ�������������"><a href="#���ֱ�������������" class="headerlink" title="���ֱ�������������"></a>���ֱ�������������</h2><p>JavaScript�м�var�Ͳ���var����������������</p>
-<p>����Ϊ����һ�仰��<br><strong>var�����ı���Ϊ�ֲ���������function�У�������var�����ı���Ϊȫ�ֱ����������Ƿ���function�У���</strong></p>
-<p>�����������£�<br>var��������<strong><em>�ֲ�����</em></strong>���������÷�Χ���ڰ������ĺ����У���ͬ�����е���ͬ���������ụ����ͻ��<br>Ȼ��������var��������<strong><em>ȫ�ֱ���</em></strong>������ȱ�����ڣ�<br>��ͬһ��ҳ���еĲ�ͬJavaScript�ļ��У���������var��������ͬ�������ı�������ô���������ụ��Ӱ�죬�������Ե��Ե�bug�Ĳ�����</p>
-<h2 id="Strictgʽ"><a href="#Strictgʽ" class="headerlink" title="Strictģʽ"></a>Strictģʽ</h2><p>������һȱ�ݣ�ECMAScript��֮���Ĺ淶���Ƴ���<strong><em>Strictģʽ</em></strong>���������ڸ�ģʽ�½�ֹʹ�ò���var�ķ�������������ǿ�����б�����������var(��const��let)������������ֹ�������ĳ�ͻ��</p>
-<p>Strictģʽʹ�÷�����<br><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code snippet</div></pre></td></tr></table></figure></p>
+        <h2 id="两种变量声明的区别"><a href="#两种变量声明的区别" class="headerlink" title="两种变量声明的区别"></a>两种变量声明的区别</h2><p>JavaScript中加var和不加var声明变量的区别：</p>
+<p>归结为下面一句话，<br><strong>var定义的变量为局部变量（在function中），不加var定义的变量为全局变量（无论是否在function中）。</strong></p>
+<p>具体分析如下：<br>var声明的是<strong><em>局部变量</em></strong>，它的作用范围仅在包含它的函数中，不同函数中的相同变量名不会互相冲突。<br>然而，不加var声明的是<strong><em>全局变量</em></strong>，它的缺陷在于：<br>在同一个页面中的不同JavaScript文件中，如果不加var定义了相同变量名的变量，那么两个变量会互相影响，导致难以调试的bug的产生。</p>
+<h2 id="Strict模式"><a href="#Strict模式" class="headerlink" title="Strict模式"></a>Strict模式</h2><p>由于这一缺陷，ECMAScript在之后的规范中推出了<strong><em>Strict模式</em></strong>，作用是在该模式下禁止使用不加var的方法定义变量，强制所有变量都必须用var(或const，let)进行声明，防止变量间的冲突。</p>
+<p>Strict模式使用方法：<br><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code snippet</div></pre></td></tr></table></figure></p>
 <iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/shorttag/embedded/500/500" frameborder="0" allowfullscreen></iframe>
-<figure class="highlight javascript"><figcaption><span>strictģʽ</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"><span class="comment">//��js��������һ���ַ�������</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>strict模式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"><span class="comment">//在js首行添加一行字符串如上</span></div></pre></td></tr></table></figure>
 
     
 
@@ -581,7 +581,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/j��ѧϰ/">ǰ��ѧϰ<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
