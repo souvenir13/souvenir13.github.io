@@ -23,8 +23,6 @@
     
     
     
-        <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
-    
     
     
     
@@ -249,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#比较三种情况："><span class="post-toc-number">1.</span> <span class="post-toc-text">比较三种情况：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#以下图片能够通俗易懂地了解三种情况的区别："><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">以下图片能够通俗易懂地了解三种情况的区别：</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#聊聊defer和async的具体特征："><span class="post-toc-number">2.</span> <span class="post-toc-text">聊聊defer和async的具体特征：</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#比较三种情况："><span class="post-toc-number">1.</span> <span class="post-toc-text">比较三种情况：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#聊聊defer和async的具体特征："><span class="post-toc-number">2.</span> <span class="post-toc-text">聊聊defer和async的具体特征：</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -414,7 +412,7 @@
 <p> 第一种情况下，浏览器解析到script时，会停止对之后内容的解析，立即加载JS，加载完毕后立即执行，执行完毕后再继续解析之后的内容。</p>
 <p> 第二种情况下，浏览器立即加载JS的同时不会停止对之后内容的解析，然而对JS的执行会延迟到页面完全解析完之后。</p>
 <p> 第三种情况与第二种情况的区别在于，JS加载完毕后会立即执行（异步执行），所以很有可能不是按照原本的顺序来执行的。</p>
-<h5 id="以下图片能够通俗易懂地了解三种情况的区别："><a href="#以下图片能够通俗易懂地了解三种情况的区别：" class="headerlink" title="以下图片能够通俗易懂地了解三种情况的区别："></a>以下图片能够通俗易懂地了解三种情况的区别：</h5><p><img src="/img/defer_async.jpg" alt="pic" title="defer和async的区别"></p>
+<p><strong> 以下图片能够通俗易懂地了解三种情况的区别： </strong><br><img src="/img/defer_async.jpg" alt="pic" title="defer和async的区别"></p>
 <ul>
 <li>注1：<br>在使用async时，要明确外联脚本之间的没有依赖关系。以免脚本异步执行，引发错误。</li>
 <li>注2：<br>无论使用defer还是async属性，都需要首先将页面中的js文件进行整理，哪些文件之间有依赖性，哪些文件可以延迟加载等等，做好js代码的合并和拆分，然后再根据页面需要使用这两个属性。</li>
@@ -454,27 +452,34 @@
                     
 
 
-    <!-- 使用 changyan -->
-    <div id="changyan-comment">
-        <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="2017/04/25/script-标签属性defer和async的区别/"  ></div>
-<script type="text/javascript">
-(function(){
-var appid = 'cysXXcgDQ';
-var conf = '1f82108da6bc42647e4e97acad596e03';
-var width = window.innerWidth || document.documentElement.clientWidth;
-if (width < 960) {
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+
+    <!-- 使用 DISQUS -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://souvenir13.github.io/2017/04/25/script-标签属性defer和async的区别/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://souvenir13.github.io/2017/04/25/script-标签属性defer和async的区别/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//https-souvenir13-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
 
     </div>
     <style>
-        #changyan-comment{
+        #disqus-comment{
             background-color: #eee;
             padding: 2pc;
         }
     </style>
-
-
 
 
 
@@ -824,12 +829,10 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-    <!-- 畅言公共 js 代码 start -->
-		<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysXXcgDQ">
-</script>
-    <!-- 畅言公共 js 代码 end -->
 
 
+    <!-- 使用 DISQUS js 代码 -->
+    <script id="dsq-count-scr" src="//https-souvenir13-github-io.disqus.com/count.js" async></script>
 
 
 
