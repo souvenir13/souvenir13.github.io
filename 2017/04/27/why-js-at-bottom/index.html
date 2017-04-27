@@ -247,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#浏览器渲染流程"><span class="post-toc-number">1.</span> <span class="post-toc-text">浏览器渲染流程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为什么JS调用尽量放到网页底部？"><span class="post-toc-number">2.</span> <span class="post-toc-text">为什么JS调用尽量放到网页底部？</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#浏览器渲染流程"><span class="post-toc-number">1.</span> <span class="post-toc-text">浏览器渲染流程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为什么JS调用尽量放到网页底部？"><span class="post-toc-number">2.</span> <span class="post-toc-text">为什么JS调用尽量放到网页底部？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#存在的疑问"><span class="post-toc-number">3.</span> <span class="post-toc-text">存在的疑问</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -415,15 +415,15 @@
 <p>（这里的首屏时间指的是浏览器第一次painting的时间。首屏内容的显示可以是不完整的。）</p>
 <p><strong>相关学习文档：</strong></p>
 <ol>
-<li><a href="https://www.zhihu.com/question/34147508]网站为什么" target="_blank" rel="external">JS 调用尽量放到网页底部？-from知乎</a></li>
-<li><a href="https://segmentfault.com/a/1190000004292479]JS" target="_blank" rel="external">一定要放在 Body 的最底部么？聊聊浏览器的渲染机制</a></li>
+<li><a href="https://www.zhihu.com/question/34147508" target="_blank" rel="external">JS 调用尽量放到网页底部？-from知乎</a></li>
+<li><a href="https://segmentfault.com/a/1190000004292479" target="_blank" rel="external">一定要放在 Body 的最底部么？聊聊浏览器的渲染机制</a></li>
 <li><a href="https://segmentfault.com/a/1190000007766425" target="_blank" rel="external">聊聊浏览器的渲染机制（含示例）</a></li>
 <li><a href="http://ued.ctrip.com/blog/how-browsers-work-rendering-engine-html-parsing-series-ii.html" target="_blank" rel="external">浏览器是怎样工作的：渲染引擎，HTML解析（连载二）-from携程设计委员会</a></li>
 </ol>
-<p>在学习这些文档过程中，遇到了很多不能理解的点：</p>
+<h2 id="存在的疑问"><a href="#存在的疑问" class="headerlink" title="存在的疑问"></a>存在的疑问</h2><p>在学习这些文档过程中，遇到了很多不能理解的点：</p>
 <ol>
-<li>为什么script标签的位置不一定会影响首屏时间。<br>对于顶部的script，肯定会阻塞浏览器对之后的HTML解析，这种情况下不就影响首屏时间了吗？</li>
-<li>为什么放到网页顶部的JS不一定阻塞页面渲染</li>
+<li>为什么script标签的位置不一定会影响首屏时间？<br>对于顶部的script，肯定会阻塞浏览器对之后的HTML解析，这种情况下不就影响首屏时间了吗？</li>
+<li>为什么放到网页顶部的JS不一定阻塞页面渲染？</li>
 </ol>
 <blockquote>
 <p>除了首屏看得见的资源（主要是图片资源）外，其他资源一律需要通过js来控制，而不能随意地发起http请求（包括首屏看不到的资源）。按照这个原则，js只能放在body标签闭合之前，并且js逻辑不能随意书写！-from 知乎igetit</p>
