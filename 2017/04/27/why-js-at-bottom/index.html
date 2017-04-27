@@ -403,7 +403,8 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="浏览器渲染流程"><a href="#浏览器渲染流程" class="headerlink" title="浏览器渲染流程"></a>浏览器渲染流程</h2><p><strong> 首先了解浏览器渲染页面的工作流程： </strong><a href="https://www.zhihu.com/question/30218438" target="_blank" rel="external">浏览器加载页面的工作流程-from知乎</a></p>
+        <p>这是前端性能优化常见题，今天，通过整理各大网站上的相关文章来回答一下这个问题。</p>
+<h2 id="浏览器渲染流程"><a href="#浏览器渲染流程" class="headerlink" title="浏览器渲染流程"></a>浏览器渲染流程</h2><p><strong> 首先了解浏览器渲染页面的工作流程： </strong><a href="https://www.zhihu.com/question/30218438" target="_blank" rel="external">浏览器加载页面的工作流程-from知乎</a></p>
 <p><img src="/img/browser_render.png" alt="pic" title="浏览器加载页面工作流程"></p>
 <p>渲染引擎逐行解析HTML，为了尽快将页面呈现出来，它不会等到HTML都被解析完才创建并布局Render Tree。它会在处理后续内容的同时把处理过的局部内容先展示出来。</p>
 <p>之前理解有误，<strong>外部JS并不是浏览器逐行解析到script后再向服务器发起请求的</strong>，而是浏览器请求到HTML代码后，在生成DOM的最开始阶段，并行发起css、图片、js的请求，无论他们是否在HEAD里。但是JS的执行顺序是根据浏览器解析script标签顺序来的，因为JS引擎（负责对JS的解析与执行）是单线程的，所以JS的执行势必会对DOM Tree的构建造成阻塞。</p>
@@ -425,9 +426,8 @@
 <li>为什么script标签的位置不一定会影响首屏时间？<br>对于顶部的script，肯定会阻塞浏览器对之后的HTML解析，这种情况下不就影响首屏时间了吗？</li>
 <li>为什么放到网页顶部的JS不一定阻塞页面渲染？</li>
 </ol>
-<blockquote>
-<p>除了首屏看得见的资源（主要是图片资源）外，其他资源一律需要通过js来控制，而不能随意地发起http请求（包括首屏看不到的资源）。按照这个原则，js只能放在body标签闭合之前，并且js逻辑不能随意书写！-from 知乎igetit</p>
-</blockquote>
+<blockquote><p>除了首屏看得见的资源（主要是图片资源）外，其他资源一律需要通过js来控制，而不能随意地发起http请求（包括首屏看不到的资源）。按照这个原则，js只能放在body标签闭合之前，并且js逻辑不能随意书写！</p>
+<footer><strong>igetit</strong><cite>知乎</cite></footer></blockquote>
 <p>js对其他资源的控制，需要对部分资源请求进行延时，因此将script尽可能放到底部可以防止阻塞的产生。</p>
 <p>《高性能网站建设指南》的相关笔记：</p>
 <ol>
@@ -501,6 +501,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/04/27/js-strict-mode/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -588,7 +596,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
@@ -606,7 +614,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/j��ѧϰ/">ǰ��ѧϰ<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -620,7 +628,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">3</span>
+                <span class="sidebar-badge">4</span>
             </a>
         </li>
         
