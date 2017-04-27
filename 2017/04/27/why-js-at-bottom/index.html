@@ -10,7 +10,7 @@
     
     <title>
         
-            ΪʲôJS���þ����ŵ���ҳ�ײ��� | 
+            为什么JS调用尽量放到网页底部？ | 
         
         Cbwww Blog
     </title>
@@ -58,7 +58,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://souvenir13.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="ΪʲôJS���þ����ŵ���ҳ�ײ��� | Cbwww Blog">
+    <meta property="og:title" content="为什么JS调用尽量放到网页底部？ | Cbwww Blog">
     <meta property="og:description" content="����ʦ����ѧ15���о�������־�ڳ�Ϊǰ�˴�ţ��Ů�ˣ�">
     <meta property="og:article:tag" content="JavaScript"> 
 
@@ -247,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#��������T����"><span class="post-toc-number">1.</span> <span class="post-toc-text">��������Ⱦ����</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ΪʲoJS���þ����w���ҳ�ײ���"><span class="post-toc-number">2.</span> <span class="post-toc-text">ΪʲôJS���þ����ŵ���ҳ�ײ���</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#浏览器渲染流程"><span class="post-toc-number">1.</span> <span class="post-toc-text">浏览器渲染流程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为什么JS调用尽量放到网页底部？"><span class="post-toc-number">2.</span> <span class="post-toc-text">为什么JS调用尽量放到网页底部？</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -284,7 +284,7 @@
         
     
             <p class="article-headline-p">
-                ΪʲôJS���þ����ŵ���ҳ�ײ���
+                为什么JS调用尽量放到网页底部？
             </p>
         </div>
 
@@ -352,7 +352,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ΪʲôJS���þ����ŵ���ҳ�ײ���&url=http://souvenir13.github.io//2017/04/27/why-js-at-bottom/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=为什么JS调用尽量放到网页底部？&url=http://souvenir13.github.io//2017/04/27/why-js-at-bottom/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -361,7 +361,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=ΪʲôJS���þ����ŵ���ҳ�ײ���&url=http://souvenir13.github.io//2017/04/27/why-js-at-bottom/index.html&via=Emily Chan" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=为什么JS调用尽量放到网页底部？&url=http://souvenir13.github.io//2017/04/27/why-js-at-bottom/index.html&via=Emily Chan" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -403,32 +403,32 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="��������T����"><a href="#��������T����" class="headerlink" title="��������Ⱦ����"></a>��������Ⱦ����</h2><p><strong> �����˽���������Ⱦҳ���Ĺ������̣� </strong><a href="https://www.zhihu.com/question/30218438" target="_blank" rel="external">����������ҳ���Ĺ�������-from֪��</a></p>
-<p><img src="/img/browser_render.jpg" alt="pic" title="����������ҳ�湤������"></p>
-<p>��Ⱦ�������н���HTML��Ϊ�˾��콫ҳ�����ֳ������������ȵ�HTML�����������Ŵ���������Render Tree�������ڴ����������ݵ�ͬʱ�Ѵ������ľֲ�������չʾ������</p>
-<p>֮ǰ����������<strong>�ⲿJS���������������н�����script����������������������</strong>������������������HTML��������������DOM���ʼ�׶Σ����з���css��ͼƬ��js�����������������Ƿ���HEAD�����JS��ִ��˳���Ǹ�������������script��ǩ˳�����ģ���ΪJS���棨������JS�Ľ�����ִ�У��ǵ��̵߳ģ�����JS��ִ���Ʊػ���DOM Tree�Ĺ�������������</p>
-<h2 id="ΪʲoJS���þ����w���ҳ�ײ���"><a href="#ΪʲoJS���þ����w���ҳ�ײ���" class="headerlink" title="ΪʲôJS���þ����ŵ���ҳ�ײ���"></a>ΪʲôJS���þ����ŵ���ҳ�ײ���</h2><p>�˽������ϱ���֪ʶ�󣬶Ը��������н�����<strong>ΪʲôJS���þ����ŵ���ҳ�ײ���</strong></p>
-<pre><code>1. JS�����غ�ִ�л�����DOM Tree�Ĺ�����������������Χ�ڵ�HTML����������script��ǩ���ض��������ݣ�����������Ƭ�հ״Ӷ�Ӱ����վ���û����顣
-2. ����JS���ж�DOM�Ĳ�������û�а��ⲿ�ִ�������document.ready�ӿ��ڣ���ô����JSִ�е�ʱ��DOM ���ܻ�δ�����꣬�����������������磺�԰�ť�󶨵����¼� ��ʱ����ť��û����Ⱦ���� �����󶨾ͻ���������
-</code></pre><p>������������ʱ��ָ������������һ��painting��ʱ�䡣�������ݵ���ʾ�����ǲ������ġ���</p>
-<p><strong>����ѧϰ�ĵ���</strong></p>
-<pre><code>1. [JS ���þ����ŵ���ҳ�ײ���-from֪��](https://www.zhihu.com/question/34147508]��վΪʲô)
-2. [һ��Ҫ���� Body �����ײ�ô����������������Ⱦ����](https://segmentfault.com/a/1190000004292479]JS)
-    3. [��������������Ⱦ���ƣ���ʾ����](https://segmentfault.com/a/1190000007766425)
-    4. [�����������������ģ���Ⱦ���棬HTML���������ض���-fromЯ������ίԱ��] (http://ued.ctrip.com/blog/how-browsers-work-rendering-engine-html-parsing-series-ii.html)
-</code></pre><p>��ѧϰ��Щ�ĵ������У������˺ܶ಻�������ĵ㣺</p>
+        <h2 id="浏览器渲染流程"><a href="#浏览器渲染流程" class="headerlink" title="浏览器渲染流程"></a>浏览器渲染流程</h2><p><strong> 首先了解浏览器渲染页面的工作流程： </strong><a href="https://www.zhihu.com/question/30218438" target="_blank" rel="external">浏览器加载页面的工作流程-from知乎</a></p>
+<p><img src="/img/browser_render.jpg" alt="pic" title="浏览器加载页面工作流程"></p>
+<p>渲染引擎逐行解析HTML，为了尽快将页面呈现出来，它不会等到HTML都被解析完才创建并布局Render Tree。它会在处理后续内容的同时把处理过的局部内容先展示出来。</p>
+<p>之前理解有误，<strong>外部JS并不是浏览器逐行解析到script后再向服务器发起请求的</strong>，而是浏览器请求到HTML代码后，在生成DOM的最开始阶段，并行发起css、图片、js的请求，无论他们是否在HEAD里。但是JS的执行顺序是根据浏览器解析script标签顺序来的，因为JS引擎（负责对JS的解析与执行）是单线程的，所以JS的执行势必会对DOM Tree的构建造成阻塞。</p>
+<h2 id="为什么JS调用尽量放到网页底部？"><a href="#为什么JS调用尽量放到网页底部？" class="headerlink" title="为什么JS调用尽量放到网页底部？"></a>为什么JS调用尽量放到网页底部？</h2><p>了解了以上背景知识后，对该问题进行解答：<strong>为什么JS调用尽量放到网页底部？</strong></p>
+<pre><code>1. JS的下载和执行会阻塞DOM Tree的构建，对于在首屏范围内的HTML代码段里的script标签会截断首屏内容，造成首屏大片空白从而影响网站的用户体验。
+2. 如果JS中有对DOM的操作并且没有把这部分代码放入document.ready接口内，那么，当JS执行的时候DOM 可能还未加载完，这样便会出错。比如：对按钮绑定点击事件 这时候按钮还没被渲染出来 对他绑定就会出现问题
+</code></pre><p>（这里的首屏时间指的是浏览器第一次painting的时间。首屏内容的显示可以是不完整的。）</p>
+<p><strong>相关学习文档：</strong></p>
+<pre><code>1. [JS 调用尽量放到网页底部？-from知乎](https://www.zhihu.com/question/34147508]网站为什么)
+2. [一定要放在 Body 的最底部么？聊聊浏览器的渲染机制](https://segmentfault.com/a/1190000004292479]JS)
+    3. [聊聊浏览器的渲染机制（含示例）](https://segmentfault.com/a/1190000007766425)
+    4. [浏览器是怎样工作的：渲染引擎，HTML解析（连载二）-from携程设计委员会] (http://ued.ctrip.com/blog/how-browsers-work-rendering-engine-html-parsing-series-ii.html)
+</code></pre><p>在学习这些文档过程中，遇到了很多不能理解的点：</p>
 <ol>
-<li>Ϊʲôscript��ǩ��λ�ò�һ����Ӱ������ʱ�䡣<br>���ڶ�����script���϶���������������֮����HTML���������������²���Ӱ������ʱ��������</li>
-<li>Ϊʲô�ŵ���ҳ������JS��һ������ҳ����Ⱦ</li>
+<li>为什么script标签的位置不一定会影响首屏时间。<br>对于顶部的script，肯定会阻塞浏览器对之后的HTML解析，这种情况下不就影响首屏时间了吗？</li>
+<li>为什么放到网页顶部的JS不一定阻塞页面渲染</li>
 </ol>
 <blockquote>
-<p>�����������ü�����Դ����Ҫ��ͼƬ��Դ���⣬������Դһ����Ҫͨ��js�����ƣ������������ط���http���󣨰�����������������Դ������������ԭ����jsֻ�ܷ���body��ǩ�պ�֮ǰ������js�߼�����������д��-from ֪��igetit</p>
+<p>除了首屏看得见的资源（主要是图片资源）外，其他资源一律需要通过js来控制，而不能随意地发起http请求（包括首屏看不到的资源）。按照这个原则，js只能放在body标签闭合之前，并且js逻辑不能随意书写！-from 知乎igetit</p>
 </blockquote>
-<p>js��������Դ�Ŀ��ƣ���Ҫ�Բ�����Դ����������ʱ�����˽�script�����ܷŵ��ײ����Է�ֹ�����Ĳ�����</p>
-<p>����������վ����ָ�ϡ������رʼǣ�</p>
-<pre><code>1. [ǰ����վ�����Ż�14��](http://giscafer.com/2015/09/06/web-performance-optimization/)
-2. [����������վ����ָ�ϡ��ʼ�](http://www.qdfuns.com/notes/42225/ba180246ba836816eba515f541427322.html)
-</code></pre><p>ǰ�˳�ѧ�ߣ����кܶ಻���õط�����������ָ����</p>
+<p>js对其他资源的控制，需要对部分资源请求进行延时，因此将script尽可能放到底部可以防止阻塞的产生。</p>
+<p>《高性能网站建设指南》的相关笔记：</p>
+<pre><code>1. [前端网站性能优化14点](http://giscafer.com/2015/09/06/web-performance-optimization/)
+2. [《高性能网站建设指南》笔记](http://www.qdfuns.com/notes/42225/ba180246ba836816eba515f541427322.html)
+</code></pre><p>前端初学者，还有很多不懂得地方，望大神们指导！</p>
 
     
 
@@ -600,7 +600,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/j��ѧϰ/">ǰ��ѧϰ<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
