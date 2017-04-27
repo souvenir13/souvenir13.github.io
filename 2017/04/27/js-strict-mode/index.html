@@ -407,7 +407,7 @@
 <p>归结为下面一句话，<br><strong>var定义的变量为局部变量（在function中），不加var定义的变量为全局变量（无论是否在function中）。</strong></p>
 <p>具体分析如下：<br>var声明的是<strong><em>局部变量</em></strong>，它的作用范围仅在包含它的函数中，不同函数中的相同变量名不会互相冲突。<br>然而，不加var声明的是<strong><em>全局变量</em></strong>，它的缺陷在于：<br>在同一个页面中的不同JavaScript文件中，如果不加var定义了相同变量名的变量，那么两个变量会互相影响，导致难以调试的bug的产生。</p>
 <h2 id="Strict模式"><a href="#Strict模式" class="headerlink" title="Strict模式"></a>Strict模式</h2><p>由于这一缺陷，ECMAScript在之后的规范中推出了<strong><em>Strict模式</em></strong>，作用是在该模式下禁止使用不加var的方法定义变量，强制所有变量都必须用var(或const，let)进行声明，防止变量间的冲突。</p>
-<p>Strict模式使用方法：<br><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code snippet</div></pre></td></tr></table></figure></p>
+<p>Strict模式使用方法：</p>
 <iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/shorttag/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
 <figure class="highlight javascript"><figcaption><span>strict模式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"><span class="comment">//在js首行添加一行字符串如上</span></div></pre></td></tr></table></figure>
 
