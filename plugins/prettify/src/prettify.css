@@ -4,7 +4,9 @@
   font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
   border: 0 !important;
 }
-
+pre{
+    font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+}
 .pln {
   color: #4d4d4c;
 }
