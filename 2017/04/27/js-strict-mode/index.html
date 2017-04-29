@@ -412,6 +412,47 @@
 <h2 id="Strict模式"><a href="#Strict模式" class="headerlink" title="Strict模式"></a>Strict模式</h2><p>由于这一缺陷，ECMAScript在之后的规范中推出了<strong><em>Strict模式</em></strong>，作用是在该模式下禁止使用不加var的方法定义变量，强制所有变量都必须用var(或const，let)进行声明，防止变量间的冲突。</p>
 <p>Strict模式使用方法：</p>
 <pre><code>&#39;use strict&#39; &#x2F;&#x2F;在js首行添加一行字符串如上</code></pre>
+<p>如何检验浏览器是否支持strict模式：<br><pre><code>&#39;use strict&#39;
+a = &#39;haha&#39;;
+alert(a)
+&#x2F;&#x2F; 若浏览器不支持该模式则不报错
+&#x2F;&#x2F; 若浏览器支持则报ReferenceError错误 </code></pre></p>
+<p>参考：<br><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499190108eec0bdf14e704a09935cd112e501e31a000" target="_blank" rel="external">廖雪峰JavaScript教程</a></p>
+<p>既然讲到了var，那么我们来讲一下JavaScript中的三种声明方式的区别：<br><strong> const，let，var </strong><br>const——（ES6新提出）声明常量，<strong>声明时必须进行初始化，并且之后不能修改</strong>。<br><pre><code>&#39;use strict&#39;
+const a = 7;
+&#x2F;&#x2F;const a;未初始化，报SyntaxError错误
+console.log(&#39;a=&#39;+a);</code></pre></p>
+<p>let——声明块级作用域<br>函数内部中，var定义的是作用域为整个函数内部的变量，如果存在for循环，var无法定义作用域仅为for循环中的变量，而let则定义了for循环块级作用域的变量。<br><strong> 此外 </strong>，即使let定义了相同变量名的变量，并且两者的作用域是包含和被包含的关系，外部作用域和内部作用域依旧互相隔离，互不影响。<br><pre><code>function foo(){
+    let i = 0;
+    for (let i=2;i&lt;3;i++){
+        &#x2F;&#x2F;
+        alert(&quot;i in for:&quot;+i);
+    }
+    alert(&quot;i out for:&quot;+i);
+}
+foo();
+&#x2F;&#x2F;alert &quot;i in for:2&quot;
+&#x2F;&#x2F;alert &quot;i in for:0&quot;
+&#x2F;&#x2F;两个i不相互影响，for中的i只存在在循环块级作用域中。</code></pre></p>
+<p>var——声明局部作用域，声明的变量可以多次修改，不初始化的变量返回undefined，不报错。<br><pre><code>var i = 0;
+function foo(){
+    i =1;
+    alert(i);
+}
+foo();&#x2F;&#x2F; 1
+alert(i);&#x2F;&#x2F; 1</code></pre></p>
+<pre><code>var i = 0;
+function foo(){
+    var i =1;
+    alert(i);
+}
+foo();&#x2F;&#x2F; 1 ，i被重新声明并且作用域只存在在foo函数中。
+alert(i);&#x2F;&#x2F; 0</code></pre>
+<p>参考：</p>
+<ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344993159773a464f34e1724700a6d5dd9e235ceb7c000" target="_blank" rel="external">廖雪峰JavaScript教程</a></li>
+<li><a href="http://www.jb51.net/article/94495.htm" target="_blank" rel="external">JavaScript中const、var和let区别浅析</a></li>
+</ul>
 
     
 
