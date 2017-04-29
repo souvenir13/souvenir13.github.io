@@ -1,5 +1,6 @@
 /*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
 .prettyprint {
+  background: #ffffff;
   font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
   border: 0 !important;
 }
@@ -28,7 +29,6 @@ li.L7,
 li.L8,
 li.L9 {
   padding-left: 1em;
-  background-color: #ffffff;
   list-style-type: decimal;
 }
 
