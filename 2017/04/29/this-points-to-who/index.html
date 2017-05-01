@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: JavaScript | 
+            this究竟指向谁？ | 
         
         Cbwww Blog
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Emily Chan">
     <meta name="description" content="华东师范大学15级研究生，立志于成为前端大牛的女人！">
-    <meta name="keywords" content="JavaScript,ǰ��">
+    <meta name="keywords" content="JavaScript,ǰ��,JavaScript,This关键字">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://souvenir13.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: JavaScript | Cbwww Blog">
+    <meta property="og:title" content="this究竟指向谁？ | Cbwww Blog">
     <meta property="og:description" content="华东师范大学15级研究生，立志于成为前端大牛的女人！">
-    
+    <meta property="og:article:tag" content="JavaScript"> <meta property="og:article:tag" content="This关键字"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -224,274 +224,308 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数的不同调用场景"><span class="post-toc-number">1.</span> <span class="post-toc-text">函数的不同调用场景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-独立的函数调用"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1. 独立的函数调用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-作为对象的方法调用"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2. 作为对象的方法调用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-作为构造函数调用"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3. 作为构造函数调用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-apply调用"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4. apply调用</span></a></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/29/this-points-to-who/">this究竟指向谁？</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            this的指向是由它所在函数调用的上下文决定的；而不是由它所在函数定义的上下文决定的。也就是说，函数的调用场景不同...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/29/this-points-to-who/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/mypic.jpg" width="44px" height="44px" alt="Emily Chan's avatar">
-            </div>
-            <div>
-                <strong>Emily Chan</strong>
-                <span>4月 29, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/前端学习/">前端学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/27/js-strict-mode/">JavaScript变量定义之——strict模式</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/27/js-strict-mode/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/mypic.jpg" width="44px" height="44px" alt="Emily Chan's avatar">
-            </div>
-            <div>
-                <strong>Emily Chan</strong>
-                <span>4月 27, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/前端学习/">前端学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/27/why-js-at-bottom/">为什么JS调用尽量放到网页底部？</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            这是前端性能优化常见题，今天，通过整理各大网站上的相关文章来回答一下这个问题。
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/27/why-js-at-bottom/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/mypic.jpg" width="44px" height="44px" alt="Emily Chan's avatar">
-            </div>
-            <div>
-                <strong>Emily Chan</strong>
-                <span>4月 27, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/前端学习/">前端学习</a>, <a class="post_category-link" href="/categories/前端学习/性能优化/">性能优化</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/25/script-defer-async/">script标签属性defer和async的区别</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            感觉《JavaScript高级设计程序》书中对defer和async的描述不是很清楚，于是又翻阅了一些相关资料来学习，以下是我的相关学习笔记。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/25/script-defer-async/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/mypic.jpg" width="44px" height="44px" alt="Emily Chan's avatar">
-            </div>
-            <div>
-                <strong>Emily Chan</strong>
-                <span>4月 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/前端学习/">前端学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                this究竟指向谁？
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/mypic.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Emily Chan</strong>
+        <span>4月 29, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1ElEQVR42u3aS5IiMQwFQO5/6ekD9ABPEtVRyOkVERjj9Eahz+PfkeuBjY2NjY2NjY2NfUv2I17/OejJnmf731zr5a9+n1+9MzY2NvZu9nUXer0zP7/6rNjY2NhnspOA9Gx/ld170N6dsbGxsbFzWHJynlrkT4CNjY2NfV0AyxOJajELGxsbG7tXoOntfxaQousWExhsbGzsM9l50/Q+n/+0v42NjY19Y/ZksKbaBkgedD768/Tm2NjY2EvZ1ZJQMlKTJxL5A1UfERsbG/scdlLoz4PTHNwrb0XtB2xsbOzV7LyBmqQNveGbvHlcbT9jY2Njn8xOUotJc7c3mtNMgbCxsbEPZvfKQJOQVh3xGTV6sbGxsb+cXS0nVS/dCznV5CcKsdjY2NhL2b0gUS0AfTYoVkd/sLGxsU9gV5HVklA+4lMd+snPx8bGxt7NTv642rL9bCP5A6kONjY29lJ2EormV58MVlafFRsbG/s0doLJ04/80vng5uRbbGxs7BPYeRqQB6c8RUnat3my8caFjY2NvZQ9Lx7lYzRz3iisYmNjYy9lV9ux8wGafHCn2hh4E9KwsbGxV7Mn+LxU1DshLz+VMzBsbGzsFex5wai6qinK652FE7CxsbGXsntjN/MBmmqLt3qrQtzGxsbGXsHuFfSTYlOeqEzGgC5sD2BjY2N/Obta3Om1Y68Y/RwFMGxsbOwvZydpRt5amAzc5CM+0b9jY2NjH8CetHV7DYPJb8vnY2NjYy9lV1e5KF98rF6YjJoK2NjY2EvZk2CTtwqqBazq52bcxsbGxl7EToLWpJA0CZa9hjQ2Njb2mezmUGPrUV7/16cKSdjY2NjYkxZCVOgJwL2S1iUBDBsbG3spu1CgLxaYek2LC1MRbGxs7Nuzk+JOdU/SSMhbBaPyFjY2NvZqdl6syUdn8hSil/BUkx9sbGzsrexzFjY2NjY2NjY2NvZt1g/ps7nM3aG93wAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/This关键字/">This关键字</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=this究竟指向谁？&url=http://souvenir13.github.io//2017/04/29/this-points-to-who/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=this究竟指向谁？&url=http://souvenir13.github.io//2017/04/29/this-points-to-who/index.html&via=Emily Chan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://souvenir13.github.io//2017/04/29/this-points-to-who/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://souvenir13.github.io//2017/04/29/this-points-to-who/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><strong>this的指向是由它所在函数调用的上下文决定的；而不是由它所在函数定义的上下文决定的。</strong>也就是说，函数的调用场景不同，this指向也会相应地有所改变。</p>
+<h2 id="函数的不同调用场景"><a href="#函数的不同调用场景" class="headerlink" title="函数的不同调用场景"></a>函数的不同调用场景</h2><h3 id="1-独立的函数调用"><a href="#1-独立的函数调用" class="headerlink" title="1. 独立的函数调用"></a>1. 独立的函数调用</h3><p>在一个独立的函数调用中，<strong>非strict模式下</strong>，函数中this的指向为window；<strong>strict模式下</strong>，函数中this的指向undefined。<br><pre><code>var x = 1;
+function test(){
+　　alert(this.x);
+}
+test(); &#x2F;&#x2F; 1</code></pre></p>
+<h3 id="2-作为对象的方法调用"><a href="#2-作为对象的方法调用" class="headerlink" title="2. 作为对象的方法调用"></a>2. 作为对象的方法调用</h3><p>在一个<strong>方法</strong>（绑定到对象上的函数称作方法）内部的this，始终指向当前对象。<br><pre><code>function test(){
+　　alert(this.x);
+}
+var o = {};
+o.x = 1;
+o.m = test;
+o.m(); &#x2F;&#x2F; 1</code></pre></p>
+<h3 id="3-作为构造函数调用"><a href="#3-作为构造函数调用" class="headerlink" title="3. 作为构造函数调用"></a>3. 作为构造函数调用</h3><p>所谓构造函数，即通过这个函数生成一个新对象。<br><pre><code>function test(){
+　　this.x = 1;
+}
+var o = new test();
+alert(o.x); &#x2F;&#x2F; 1</code></pre></p>
+<h3 id="4-apply调用"><a href="#4-apply调用" class="headerlink" title="4. apply调用"></a>4. apply调用</h3><p>为了控制函数中的this指向，可以调用函数本身的apply方法，apply中传入两个参数，第一个是需要绑定的this变量，第二个参数是Array类型的，表示函数本身的参数。<br><pre><code>function getAge(){
+ var y = new Date().getFullYear();
+ return y - this.birth;
+}
+var bowen = {
+ name:&#39;bowen&#39;,
+ birth:1993,
+ age:getAge
+};
+console.log(bowen.age());&#x2F;&#x2F;24
+console.log(getAge());&#x2F;&#x2F;NaN
+console.log(getAge.apply(bowen,[]));&#x2F;&#x2F;24</code></pre></p>
+<p>call()方法和apply()类似，区别在于：<br>apply是将参数打包成array传递；call则是将参数逐个传递。<br>举个例子，调用Math.max(3,4,5)，使用apply和call传参方式如下：<br><pre><code>console.log(Math.max.apply(null,[3,4,5]));&#x2F;&#x2F;5
+console.log(Math.max.call(null,3,4,5));&#x2F;&#x2F;5</code></pre></p>
+<pre><code>var count = 0;
+var oldparseInt = parseInt;
+window.parseInt = function (){
+ count += 1;
+ return oldparseInt.apply(null,arguments);
+};
+console.log(parseInt(&#39;10&#39;));
+console.log(parseInt(&#39;20aaa&#39;));
+console.log(parseInt(&#39;30bbbe11&#39;));
+console.log(&#39;count=&#39;+count);&#x2F;&#x2F;3</code></pre>
+<p>另，apply()参数为空时，默认调用全局对象。</p>
+<p>参考：</p>
+<ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014345005399057070809cfaa347dfb7207900cfd116fb000" target="_blank" rel="external">廖雪峰JavaScript教程</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="external">Javascript的this用法from阮一峰</a></li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://souvenir13.github.io/2017/04/29/this-points-to-who/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://souvenir13.github.io/2017/04/29/this-points-to-who/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//https-souvenir13-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/04/27/js-strict-mode/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -662,6 +696,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
