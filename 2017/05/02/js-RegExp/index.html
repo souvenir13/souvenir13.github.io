@@ -415,8 +415,29 @@
 <blockquote>
 <p>当你想要知道在一个字符串中的一个匹配是否被找到，你可以使用test或search方法；想得到更多的信息（但是比较慢）则可以使用exec或match方法。如果你使用exec或match方法并且匹配成功了，那么这些方法将返回一个数组并且更新相关的正则表达式对象的属性和预定义的正则表达式对象（详见下）。如果匹配失败，那么exec方法返回null（也就是false）。</p>
 </blockquote>
-<h2 id="正则表达式标志"><a href="#正则表达式标志" class="headerlink" title="正则表达式标志"></a>正则表达式标志</h2><p>g 全局搜索（查找所有匹配而非查找到一个后立即返回）<br>i 不区分大小搜索<br>m 多行搜索<br>y 执行粘性搜索</p>
-<p>参考：</p>
+<h2 id="正则表达式标志"><a href="#正则表达式标志" class="headerlink" title="正则表达式标志"></a>正则表达式标志</h2><p>g 全局搜索<br>i 不区分大小搜索<br>m 多行搜索<br>y 执行粘性搜索</p>
+<p>g 全局搜索<br>查找所有匹配而非查找到一个后立即返回，查找到第一个匹配字符串后从下一个位置lastIndex开始继续查找。<br>在全局搜索下，每次匹配成功都会更新lastIndex的值。<br><pre><code>var re = &#x2F;o&#x2F;g;           &#x2F;&#x2F;全局匹配
+console.log(re.lastIndex);     &#x2F;&#x2F;0,lastIndex属性的初始值为0
+console.log(re.test(&quot;foo&quot;));   &#x2F;&#x2F;true,匹配了第二个字符
+console.log(re.lastIndex);     &#x2F;&#x2F;2,lastIndex属性的值被设置为2,也就是第二个字符之后
+console.log(re.test(&quot;foo&quot;));   &#x2F;&#x2F;true,从第二个字符(lastIndex属性的值)之后开始匹配,匹配了第三个字符
+console.log(re.lastIndex);     &#x2F;&#x2F;3,lastIndex属性的值被设置为2,也就是字符串的末尾
+console.log(re.test(&quot;foo&quot;));   &#x2F;&#x2F;false,已经没有字符了,匹配失败.
+console.log(re.lastIndex);     &#x2F;&#x2F;0,lastIndex属性的值被重置为0
+console.log(re.test(&quot;foo&quot;));   &#x2F;&#x2F;true,又一次重新开始匹配
+console.log(re.lastIndex);     &#x2F;&#x2F;2,一直循环下去
+re.lastIndex = 3;        &#x2F;&#x2F;手动修改为3
+console.log(re.test(&quot;foo&quot;));   &#x2F;&#x2F;false,从第三个字符后开始匹配,所以匹配失败</code></pre></p>
+<p>y 执行粘性搜索 ES6特性<br>“y” 标志指示，仅从正则表达式的 lastIndex 属性表示的索引处为目标字符串匹配（并且不会尝试从后续索引匹配）。<br><a href="http://www.cnblogs.com/ziyunfei/archive/2012/12/07/2807313.html" target="_blank" rel="external">JavaScript:正则表达式的/y标志</a> 中指出的对粘性搜索中^的解释有点问题，文章<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky" target="_blank" rel="external">RegExp.prototype.sticky</a> 给出了纠正，并给出正确示例。<br><pre><code>var regex = &#x2F;^foo&#x2F;y;
+regex.lastIndex = 2;
+regex.test(&quot;..foo&quot;);   &#x2F;&#x2F; false - 索引2不是字符串的开始
+
+var regex2 = &#x2F;^foo&#x2F;my;
+regex2.lastIndex = 2;
+regex2.test(&quot;..foo&quot;);  &#x2F;&#x2F; false - 索引2不是字符串或行的开始
+regex2.lastIndex = 2;
+regex2.test(&quot;.\nfoo&quot;); &#x2F;&#x2F; true - 索引2是行的开始</code></pre></p>
+<p>参考/引用：</p>
 <ul>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="external">正则表达式-MDN</a></li>
 <li><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499503920bb7b42ff6627420da2ceae4babf6c4f2000#0" target="_blank" rel="external">RegExp-廖雪峰JavaScript教程</a></li>
