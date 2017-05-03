@@ -410,7 +410,12 @@
 <p>\b 匹配单词边界<br>\B 匹配非单词边界</p>
 <p>(?:x) 非捕获括号，匹配整个x<br>(?:foo)+ 匹配一个或多个foo</p>
 <p>另，<br>量词例如*、+、？或{}的后面加上？，表示切换至非贪婪模式（匹配尽可能少的字符）。</p>
-<h2 id="RegEx对象方法"><a href="#RegEx对象方法" class="headerlink" title="RegEx对象方法"></a>RegEx对象方法</h2><p>test() 用于测试给定字符串是否符合条件<br>exec() 如果正则表达式中定义了组(含圆括号)，可以在RegEx对象上用exec()方法提取出子串。<br>正则表达式中需要专业的特殊字符：<br>^ $ | ? . * + { } [ ] ( ) / \</p>
+<h2 id="RegEx对象方法"><a href="#RegEx对象方法" class="headerlink" title="RegEx对象方法"></a>RegEx对象方法</h2><p>test() 用于测试给定字符串是否符合条件<br>exec() 如果正则表达式中定义了组(含圆括号)，可以在RegEx对象上用exec()方法提取出子串。<br>正则表达式中需要转义的特殊字符：<br>^ $ | ? . * + { } [ ] ( ) / \</p>
+<p>示例：提取网站名<br><pre><code>var re = &#x2F;www\.(.+?)\.com&#x2F;g;&#x2F;&#x2F;非贪婪模式
+var str = &quot;www.baidu.com www.google.com www.baidu.com&quot;;
+console.log(re.exec(str));&#x2F;&#x2F;[&quot;www.baidu.com&quot;, &quot;baidu&quot;]
+console.log(re.exec(str));&#x2F;&#x2F;[&quot;www.google.com&quot;, &quot;google&quot;]
+console.log(re.exec(str));&#x2F;&#x2F;[&quot;www.baidu.com&quot;, &quot;baidu&quot;]</code></pre></p>
 <h2 id="String的方法"><a href="#String的方法" class="headerlink" title="String的方法"></a>String的方法</h2><p>match()、search()、replace()、split()</p>
 <p>String方法进行正则匹配会忽略lastIndex。<br>exec()和match()方法返回的都是数组，但exec()返回值还包括index和input两个属性。<br><pre><code>var  pattern = &#x2F;(www)\.(baidu)\.(com)&#x2F;g;
 var  str2 = &#39;www.baidu.com www.google.com www.baidu.com&#39;;
