@@ -440,7 +440,7 @@ console.log(re.test(&quot;foo&quot;));   &#x2F;&#x2F;true,又一次重新开始�
 console.log(re.lastIndex);     &#x2F;&#x2F;2,一直循环下去
 re.lastIndex = 3;        &#x2F;&#x2F;手动修改为3
 console.log(re.test(&quot;foo&quot;));   &#x2F;&#x2F;false,从第三个字符后开始匹配,所以匹配失败</code></pre></p>
-<p>y 执行粘性搜索 ES6特性<br>“y” 标志指示，仅从正则表达式的 lastIndex 属性表示的索引处为目标字符串匹配（并且不会尝试从后续索引匹配）。<br>在进行/y匹配时，lastIndex不会自动归零，在正则表达式中会隐式地加入开头元字符^，使得正则从锚定lastIndex位置开始匹配。详情参见<br><a href="http://www.cnblogs.com/ziyunfei/archive/2012/12/07/2807313.html" target="_blank" rel="external">JavaScript:正则表达式的/y标志</a> 和<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky" target="_blank" rel="external">RegExp.prototype.sticky</a><br><pre><code>var regex = &#x2F;^foo&#x2F;y;
+<p>y 执行粘性搜索 ES6特性<br><strong>“y” 标志指示，仅从正则表达式的 lastIndex 属性表示的索引处为目标字符串匹配（并且不会尝试从后续索引匹配）。</strong><br>在进行/y匹配时，lastIndex不会自动归零，在正则表达式中会隐式地加入开头元字符^，使得正则从锚定lastIndex位置开始匹配。详情参见<br><a href="http://www.cnblogs.com/ziyunfei/archive/2012/12/07/2807313.html" target="_blank" rel="external">JavaScript:正则表达式的/y标志</a> 和<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky" target="_blank" rel="external">RegExp.prototype.sticky</a><br><pre><code>var regex = &#x2F;^foo&#x2F;y;
 regex.lastIndex = 2;
 regex.test(&quot;..foo&quot;);   &#x2F;&#x2F; false - 索引2不是字符串的开始
 
@@ -522,6 +522,14 @@ regex2.test(&quot;.\nfoo&quot;); &#x2F;&#x2F; true - 索引2是行的开始</cod
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/05/14/js-oop/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -609,7 +617,7 @@ regex2.test(&quot;.\nfoo&quot;); &#x2F;&#x2F; true - 索引2是行的开始</cod
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
@@ -627,7 +635,7 @@ regex2.test(&quot;.\nfoo&quot;); &#x2F;&#x2F; true - 索引2是行的开始</cod
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/前端学习/">前端学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端学习/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -641,7 +649,7 @@ regex2.test(&quot;.\nfoo&quot;); &#x2F;&#x2F; true - 索引2是行的开始</cod
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">7</span>
+                <span class="sidebar-badge">8</span>
             </a>
         </li>
         

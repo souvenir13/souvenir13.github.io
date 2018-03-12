@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: This关键字 | 
+            JavaScript面向对象编程 | 
         
         Cbwww Blog
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Emily Chan">
     <meta name="description" content="华东师范大学15级研究生，立志于成为前端大牛的女人！">
-    <meta name="keywords" content="JavaScript,ǰ��">
+    <meta name="keywords" content="JavaScript,ǰ��,JavaScript,Object Oriented Programming,面向对象编程">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://souvenir13.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: This关键字 | Cbwww Blog">
+    <meta property="og:title" content="JavaScript面向对象编程 | Cbwww Blog">
     <meta property="og:description" content="华东师范大学15级研究生，立志于成为前端大牛的女人！">
-    
+    <meta property="og:article:tag" content="JavaScript"> <meta property="og:article:tag" content="Object Oriented Programming"> <meta property="og:article:tag" content="面向对象编程"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -224,96 +224,264 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/29/this-points-to-who/">this究竟指向谁？</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            this的指向是由它所在函数调用的上下文决定的；而不是由它所在函数定义的上下文决定的。也就是说，函数的调用场景不同...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/29/this-points-to-who/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/mypic.jpg" width="44px" height="44px" alt="Emily Chan's avatar">
-            </div>
-            <div>
-                <strong>Emily Chan</strong>
-                <span>4月 29, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/前端学习/">前端学习</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                JavaScript面向对象编程
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/mypic.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Emily Chan</strong>
+        <span>5月 14, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACX0lEQVR42u3aQXKEMAwEQP7/6c0LSGYs7FBb7VNqCwzNwVIkXZ+vXhceHh4eHh4eHt7LeFe8brcLrk92bu+6fRYeHh7eEd4fR218TYLMf1l7Nzw8PLyTvOTI/j1UJCHkbp+EGt2Fh4eH92Jefs3iEY+Hh4f3Rby7ZDpJjtcSbjw8PLx38vJUOGpElUnzpAiCh4eHd56XN5nO/320v4eHh4cX8NrVptrtp/yMFx4eHt5uXn4Qr+HvQkt7ZTEEhoeHh3ecN3n1fJ8cnIQWPDw8vDfw2mM9YeSftW3C4eHh4Z3ntYf72qhBO3awll7j4eHh7eblhdenGvz5cFUbovDw8PDO8Oak5PheS5TzkgQeHh7ef/HyRtTk00yGFaIyBx4eHt5mXl48nQwKTAJMm8Tj4eHh7eatlRLakay2YTYZU8DDw8PbzXuqrZUPWq2NWOWhCw8PD+8MLy+VJu2rPC1ud1v8jwEPDw/vUd5TjOLgzsennp0pw8PDw3uUlxd280R5EgDy9HpUxsXDw8Mb85LibHt8tyWJvKRbV6nx8PDwNvCSLfLW11rpNg8Pi3EPDw8PbwMvT4XbEYFJCCneAQ8PD+8gry0oJB9oPl5Qp/h4eHh4m3ntagsEyeu2jKIBhoeHh7eBd8WrbZIl9+bjC48NXeHh4eE9xEse344CrDXA5gk6Hh4e3kle29SvH1x+mjZE4eHh4b2ZlzfD8ted/I6Hh4f3ft6kCLv2OYp98PDw8A7ykmJEi8wbY23LDQ8PD+9/eW3iu/aK7WjCWpDAw8PD2837voWHh4eHh4eHh/eC9QPf2Aw3CBhwgQAAAABJRU5ErkJggg==">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Object-Oriented-Programming/">Object Oriented Programming</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/面向对象编程/">面向对象编程</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript面向对象编程&url=http://souvenir13.github.io//2017/05/14/js-oop/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JavaScript面向对象编程&url=http://souvenir13.github.io//2017/05/14/js-oop/index.html&via=Emily Chan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://souvenir13.github.io//2017/05/14/js-oop/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://souvenir13.github.io//2017/05/14/js-oop/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>将JS面向对象编程，首先要了解面向对象的概念。</p>
+<p>OOP把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。在OOP中，每个对象都可以接收消息、处理数据和发送消息给其他对象。每个对象都可以被看作是一个拥有清晰角色或责任的独立小机器。</p>
+<p>经常与之相提并论的另一种编程方式是面向过程编程，这是一种传统的编程模式，当我们执行某个操作时，把该操作分成多个步骤顺序执行，这便是面向过程的编程思想。</p>
+<p>面向对象中的两个基本概念：类和实例。<br>类 - 一个抽象概念，用于创建对象。<br>实例 - 就是一个具体的对象。</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS -->
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://souvenir13.github.io/2017/05/14/js-oop/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://souvenir13.github.io/2017/05/14/js-oop/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//https-souvenir13-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/05/02/js-RegExp/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -484,6 +652,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
